@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "doctors",
-    "slug": "doctors",
+    "name": "doctorji",
+    "slug": "doctorji",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",
@@ -10,14 +10,14 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.prathamdas3.doctors"
+      "bundleIdentifier": "com.prathamdas3.doctorji"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.prathamdas3.doctors"
+      "package": "com.prathamdas3.doctorji"
     },
     "web": {
       "bundler": "metro",
