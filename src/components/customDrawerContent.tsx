@@ -13,7 +13,7 @@ export default function CustomDrawerContent(props: DrawerContentComponentProps) 
     const handleClose = () => { navigate.dispatch(DrawerActions.closeDrawer) }
 
     return <SafeAreaView style={{ flex: 1 }}>
-        <View style={{ display: "flex", alignItems: "center", flexDirection: "row", gap: 10, paddingHorizontal: 15, paddingVertical: 10 }}>
+        <View style={{ display: "flex", alignItems: "center", flexDirection: "row", gap: 10, paddingHorizontal: 15, paddingVertical: 10,marginTop:10 }}>
             <Avatar.Image size={52} source={require("../assets/images/profile.jpg")} />
             <View>
                 <Text variant="titleLarge">Hi, John Doe</Text>
