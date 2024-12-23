@@ -1,25 +1,25 @@
 # DoctorJI
 
-A simple React Native app built using **Expo** that displays a "Word of the Day" along with its definition and example sentence. The app also allows users to browse through previously viewed words and persists data between sessions using **AsyncStorage**. Routing is implemented using **Expo Router**.
+This React Native app is inspired by the MFine app and features side navigation, bottom navigation, a Home Screen, a Doctor Listing Screen, and Profile functionality. The app offers a responsive design for both iOS and Android platforms.
 
-
-
----
 
 ## 📱 Features
 
-- **Home Screen:**
-  - Displays a randomly fetched "Word of the Day" with its definition and example sentence.
-  - A "New Word" button to fetch and display a new word.
-  - A button to navigate to the "History" screen.
+- **Home Screen**: 
+  - Displays app logo and introduction.
+  - Includes sections like "Consult a Doctor" and "Book Tests."
+  - Bottom navigation for easy access to other screens.
 
-- **History Screen:**
-  - Displays a list of previously viewed words with their definitions, example sentences, and the date they were first displayed.
-  - A "Clear History" button to remove all past words.
+- **Doctor Listing Screen**:
+  - Displays a list of doctors with details like name, specialty, and image.
+  - Supports navigation to view detailed information for each doctor.
 
+- **Side Navigation Drawer**:
+  - Links to Home, Doctor Listing, Profile, and Logout.
 
-- **Navigation:**
-  - Utilizes **Expo Router** for seamless navigation between screens.
+- **Profile Screen**:
+  - Simple form to view and edit personal information.
+
 
 
 
@@ -62,8 +62,6 @@ A simple React Native app built using **Expo** that displays a "Word of the Day"
    pnpm run android
    ```
 
-## 🧑‍💻 Usage Instructions
-
 ## 🛠️ Technologies Used
 1. React Native (via Expo)
 2. Expo Router for navigation
@@ -72,31 +70,16 @@ A simple React Native app built using **Expo** that displays a "Word of the Day"
 
 ## 📸 Sample Screenshots
 
-### Light Theme
-<div style="display:grid,grid-cols:3">
-<img src="screenshots/image_light_loading.jpg" width="216"/>
-<img src="screenshots/img_light_1.jpg" width="216"/>
-<img src="screenshots/img_light_2.jpg" width="216"/>
-<img src="screenshots/img_light_6.jpg" width="216"/>
-<img src="screenshots/img_light_5.jpg" width="216"/>
-<img src="screenshots/img_light_8.jpg" width="216"/>
-<img src="screenshots/img_light_9.jpg" width="216"/>
-<img src="screenshots/img_light_10.jpg" width="216"/>
-<img src="screenshots/img_light_11.jpg" width="216"/>
+
+<div style="display:grid,grid-cols:2">
+<img src="screenshots/img_3.jpg" width="216"/>
+<img src="screenshots/img_2.jpg" width="216"/>
+<img src="screenshots/img_9.jpg" width="216"/>
+<img src="screenshots/img_5.jpg" width="216"/>
+<img src="screenshots/img_8.jpg" width="216"/>
+<img src="screenshots/img_6.jpg" width="216"/>
 </div>
 
-### Dark Theme
 
-<div style="display:grid,grid-cols:3">
-<img src="screenshots/img_dark_loading.jpg" width="216"/>
-<img src="screenshots/img_dark_1.jpg" width="216"/>
-<img src="screenshots/img_dark_2.jpg" width="216"/>
-<img src="screenshots/img_dark_4.jpg" width="216"/>
-<img src="screenshots/img_dark_3.jpg" width="216"/>
-<img src="screenshots/img_dark_5.jpg" width="216"/>
-<img src="screenshots/img_dark_6.jpg" width="216"/>
-<img src="screenshots/img_dark_7.jpg" width="216"/>
-<img src="screenshots/img_dark_8.jpg" width="216"/>
-</div>
 
-### Thank you for exploring the Word of the Day App! 🚀
+### Thank you for exploring the DoctorJI! 🚀
