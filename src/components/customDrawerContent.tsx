@@ -3,17 +3,17 @@ import { SafeAreaView, View } from "react-native";
 import { Avatar, Button, Text } from "react-native-paper";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation, router, usePathname } from "expo-router";
-import { DrawerActions } from "@react-navigation/native";
+// import { DrawerActions } from "@react-navigation/native";
 import { useEffect } from "react";
 
 export default function CustomDrawerContent(props: DrawerContentComponentProps) {
     const pathName = usePathname()
-    useEffect(() => { console.log(pathName) }, [pathName])
+    useEffect(() => { }, [pathName])
     const navigate = useNavigation()
-    const handleClose = () => { navigate.dispatch(DrawerActions.closeDrawer) }
+    // const handleClose = () => { navigate.dispatch(DrawerActions.closeDrawer) }
 
     return <SafeAreaView style={{ flex: 1 }}>
-        <View style={{ display: "flex", alignItems: "center", flexDirection: "row", gap: 10, paddingHorizontal: 15, paddingVertical: 10,marginTop:10 }}>
+        <View style={{ display: "flex", alignItems: "center", flexDirection: "row", gap: 10, paddingHorizontal: 15, paddingVertical: 10, marginTop: 10 }}>
             <Avatar.Image size={52} source={require("../assets/images/profile.jpg")} />
             <View>
                 <Text variant="titleLarge">Hi, John Doe</Text>
@@ -43,6 +43,9 @@ export default function CustomDrawerContent(props: DrawerContentComponentProps) 
                 onPress={() => router.push('/(drawer)/(tabs)/profile')}
             />
         </DrawerContentScrollView>
+        <View style={{ padding: 20 }}>
+            <Button mode="contained" buttonColor="red" textColor="white">Log Out</Button>
+        </View>
 
     </SafeAreaView>
 }

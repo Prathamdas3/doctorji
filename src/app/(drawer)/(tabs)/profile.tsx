@@ -1,6 +1,7 @@
+import InputField from "@/src/components/inputFormFields";
 import { useState } from "react";
 import { SafeAreaView, View, ScrollView } from "react-native";
-import { Avatar, Button, Text, TextInput, Switch } from 'react-native-paper';
+import { Avatar, Button, Text, Switch } from 'react-native-paper';
 
 const user = {
     fullName: "John Doe",
@@ -39,87 +40,64 @@ export default function ProfileScreen() {
             </View>
             <ScrollView>
                 <View style={{ display: "flex", rowGap: 10 }}>
-                    <View>
-                        <Text variant="titleMedium">Full Name</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your full name"
-                            value={updateUserData.fullName}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, fullName: text })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Phone Number</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your contact number"
-                            value={updateUserData.phoneNumber}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, phoneNumber: text })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Gender</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your gender"
-                            value={updateUserData.gender}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, gender: text })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Age</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your age"
-                            value={updateUserData.age.toString()}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, age: Number(text) })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Height(cm)</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your height"
-                            value={updateUserData.height.toString()}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, height: Number(text) })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Weight(kg)</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your weight"
-                            value={updateUserData.weight.toString()}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, weight: Number(text) })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Blood Group</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your blood group"
-                            value={updateUserData.bloodGroup}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, bloodGroup: text })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Allergies</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter if you have any allergies"
-                            value={updateUserData.allergies.join(",")}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, allergies: text.split(",") })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Current Medicines</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your current medicines"
-                            value={updateUserData.currentMedicines.join(",")}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, currentMedicines: text.split(",") })}
-                        />
-                    </View>
+                <InputField
+                        label="Full Name"
+                        value={updateUserData.fullName}
+                        placeholder="Enter your full name"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, fullName: text })}
+                    />
+                    <InputField
+                        label="Phone Number"
+                        value={updateUserData.phoneNumber}
+                        placeholder="Enter your contact number"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, phoneNumber: text })}
+                        keyboardType="numeric"
+                    />
+                    <InputField
+                        label="Gender"
+                        value={updateUserData.gender}
+                        placeholder="Enter your gender"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, gender: text })}
+                    />
+                    <InputField
+                        label="Age"
+                        value={updateUserData.age.toString()}
+                        placeholder="Enter your age"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, age: Number(text) })}
+                        keyboardType="numeric"
+                    />
+                    <InputField
+                        label="Height(cm)"
+                        value={updateUserData.height.toString()}
+                        placeholder="Enter your height"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, height: Number(text) })}
+                        keyboardType="numeric"
+                    />
+                    <InputField
+                        label="Weight(kg)"
+                        value={updateUserData.weight.toString()}
+                        placeholder="Enter your weight"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, weight: Number(text) })}
+                        keyboardType="numeric"
+                    />
+                    <InputField
+                        label="Blood Group"
+                        value={updateUserData.bloodGroup}
+                        placeholder="Enter your blood group"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, bloodGroup: text })}
+                    />
+                    <InputField
+                        label="Allergies"
+                        value={updateUserData.allergies.join(",")}
+                        placeholder="Enter if you have any allergies"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, allergies: text.split(",") })}
+                    />
+                    <InputField
+                        label="Current Medicines"
+                        value={updateUserData.currentMedicines.join(",")}
+                        placeholder="Enter your current medicines"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, currentMedicines: text.split(",") })}
+                    />
                     <View style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 10 }}>
                         <Switch
                             value={updateUserData.allowEmergencyContactAccess}
@@ -132,24 +110,19 @@ export default function ProfileScreen() {
                         />
                         <Text variant="titleMedium">Allow Emergency Contact Access</Text>
                     </View>
-                    <View>
-                        <Text variant="titleMedium">Emergency Contact Name</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your emergency contact name"
-                            value={updateUserData.emergencyContactName}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, emergencyContactName: text })}
-                        />
-                    </View>
-                    <View>
-                        <Text variant="titleMedium">Emergency Contact Number</Text>
-                        <TextInput
-                            mode="outlined"
-                            placeholder="Enter your emergency contact number"
-                            value={updateUserData.emergencyContactNumber}
-                            onChangeText={(text) => setUpdateUserData({ ...updateUserData, emergencyContactNumber: text })}
-                        />
-                    </View>
+                    <InputField
+                        label="Emergency Contact Name"
+                        value={updateUserData.emergencyContactName}
+                        placeholder="Enter your emergency contact name"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, emergencyContactName: text })}
+                    />
+                    <InputField
+                        label="Emergency Contact Number"
+                        value={updateUserData.emergencyContactNumber}
+                        placeholder="Enter your emergency contact number"
+                        onChange={(text) => setUpdateUserData({ ...updateUserData, emergencyContactNumber: text })}
+                        keyboardType="numeric"
+                    />
                     <View style={{ width: "100%" }}>
                         <Button
                             mode="contained"

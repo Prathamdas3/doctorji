@@ -25,8 +25,8 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="myapp"/>
-        <data android:scheme="com.prathamdas3.doctors"/>
-        <data android:scheme="exp+doctors"/>
+        <data android:scheme="com.prathamdas3.doctorji"/>
+        <data android:scheme="exp+doctorji"/>
       </intent-filter>
     </activity>
   </application>

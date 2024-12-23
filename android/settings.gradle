@@ -21,7 +21,7 @@ extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
   }
 }
 
-rootProject.name = 'doctors'
+rootProject.name = 'doctorji'
 
 dependencyResolutionManagement {
   versionCatalogs {
