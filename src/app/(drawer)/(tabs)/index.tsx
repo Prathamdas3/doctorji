@@ -25,8 +25,8 @@ export default function Index() {
           <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-around", gap: 10 }}>
             <Text variant="titleSmall" style={{ color: "white", width: '60%' }}>Get medicine reminders and other updates on home screen.<Text variant="labelLarge" style={{ textDecorationLine: "underline", color: "white", fontWeight: "semibold" }}>Know more</Text></Text>
             <View style={{ borderRadius: 5, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: "white", padding: 10 }}>
-
-              <Text style={{ fontWeight: "bold", color: "#f97316" }}>Enable</Text> <MoveRight color="#f97316" size={20} />
+              <Text style={{ fontWeight: "bold", color: "#f97316" }}>Enable</Text>
+              <MoveRight color="#f97316" size={20} />
             </View>
           </View>
         </LinearGradient>

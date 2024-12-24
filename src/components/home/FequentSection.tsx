@@ -13,10 +13,8 @@ export default function FrequentSection() {
             >
 
                 <Text variant="titleSmall" style={{ fontWeight: "bold", color: "#3b82f6" }}>76+ Tests</Text>
-                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Ayushman Basic
-                </Text>
-                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Health Check
-                </Text>
+                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Ayushman Basic</Text>
+                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Health Check</Text>
                 <LinearGradient colors={['#0891b2', '#1e40af']}
                     style={{ borderRadius: 10, flex: 1, padding: 8, }}
                     start={[0, 0]}
@@ -40,10 +38,8 @@ export default function FrequentSection() {
                 end={[1, 0]}
             >
                 <Text variant="titleSmall" style={{ fontWeight: "bold", color: "#3b82f6" }}>83+ Tests</Text>
-                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Ayushman Vital
-                </Text>
-                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Health Check
-                </Text>
+                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Ayushman Vital</Text>
+                <Text variant="titleMedium" style={{ fontWeight: "bold" }}>Health Check</Text>
                 <LinearGradient colors={['#0891b2', '#1e40af']}
                     style={{ borderRadius: 10, flex: 1, padding: 8, }}
                     start={[0, 0]}
