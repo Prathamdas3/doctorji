@@ -1,13 +1,12 @@
 import { Card, Text, Button } from "react-native-paper";
 import type { Doctor } from "../app/(drawer)/(tabs)/doctors";
 import { View, FlatList } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
 import { Image } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign'
 
 export default function DoctorCard({ doctor }: { doctor: Doctor }) {
-    const languages = doctor.languages_spoken.slice(0, 2)
+
 
     return <Card style={{ marginBottom: 20 }}>
         <Card.Content style={{ display: "flex", gap: 10 }}>

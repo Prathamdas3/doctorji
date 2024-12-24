@@ -39,7 +39,7 @@ export default function ProfileScreen() {
                 </View>
             </View>
             <ScrollView>
-                <View style={{ display: "flex", rowGap: 10 }}>
+                <View style={{ display: "flex", rowGap: 10,backgroundColor:"#f2f2f2" }}>
                 <InputField
                         label="Full Name"
                         value={updateUserData.fullName}
