@@ -8,7 +8,7 @@ export default function TabLayout() {
 
     return <Tabs screenOptions={{ tabBarActiveTintColor: 'blue', tabBarHideOnKeyboard: true }} >
         <Tabs.Screen name="index" options={{
-            title: "Explore",
+            title: "Home",
             header: () => <CustomHeader title="DoctorJI" />,
             tabBarIcon: ({ color }) => <Ionicons name="home" size={25} color={color} />
         }} />
@@ -16,7 +16,7 @@ export default function TabLayout() {
             title: "Choose Your Doctor",
             header: () => <CustomHeader title="Doctors" />,
             tabBarIcon: ({ color }) => <Ionicons name="medkit" size={25} color={color} />,
-            tabBarStyle: { display: segments[2] == "doctors" ? 'none' : 'flex' }
+            tabBarStyle: { display: segments[2] === "doctors" ? 'none' : 'flex' }
 
         }} />
         <Tabs.Screen name="profile" options={{

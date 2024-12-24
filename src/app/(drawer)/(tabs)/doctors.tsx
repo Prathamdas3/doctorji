@@ -32,13 +32,13 @@ export default function DoctorsListScreen() {
         setDoctors(filtered);
     }, [searchQuery]);
 
-    return <SafeAreaView style={{ padding: 10, flex: 1 }}>
-        <Searchbar value={searchQuery} onChangeText={setSearchQuery} placeholder="Search for doctor" />
-        {doctors.length !== 0 ? <View style={{ flex: 1 }}>
+    return <SafeAreaView style={{  flex: 1,backgroundColor:"white",rowGap:15 }}>
+        <Searchbar value={searchQuery} onChangeText={setSearchQuery} placeholder="Search for doctor" style={{backgroundColor:"white",borderColor:"#f2f2f2",borderWidth:3,marginHorizontal:10,marginTop:10}} />
+        {doctors.length !== 0 ? <View style={{ flex: 1,backgroundColor:"#f2f2f2",borderRadius:20,paddingHorizontal:10 }}>
             <Text variant="titleLarge" style={{ textAlign: "left", fontWeight: "bold", padding: 15 }}>Showing all the doctors available</Text>
             <FlashList data={doctors}
                 estimatedItemSize={50}
-                renderItem={({ item }: { item: Doctor }) => <DoctorCard item={item} />}
+                renderItem={({ item }: { item: Doctor }) => <DoctorCard doctor={item} />}
                 keyExtractor={(item) => item.id.toString()}
                 contentContainerStyle={{ padding: 10 }}
 
